@@ -3,3 +3,17 @@ on:
   push:
     branches:
       - anilbranch
+  workflow_dispatch:
+jobs:
+  myjob1:
+    run-on: ubuntu-latest
+    steps:
+      - name: mystep
+        run: |
+          whoami
+          pwd
+          cd
+          ls -al
+          cat /etc/os-release
+          docker --version
+          docker compose version
