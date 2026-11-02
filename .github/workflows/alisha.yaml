@@ -22,7 +22,7 @@ jobs:
       - name: mystep3- check the source code
         run: ls -al
       - name: mystep4-build docker image
-        run: docker image build -t alishakhannnnnnnnn03/myimage_nov2:t${{ github.new_number }} -f Dockerfile .
+        run: docker image build -t alishakhannnnnnnnn03/myimage_nov2:t${{ github.run_number }} -f Dockerfile .
       - name: mystep5-check the docker images
         run: docker images
       - name: mystep6-login to dockerhub
