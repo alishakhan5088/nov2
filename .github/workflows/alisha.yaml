@@ -25,3 +25,11 @@ jobs:
         run: docker image build -t alishakhannnnnnnnn03/myimage_nov2:t${{ github.new_number }} -f Dockerfile .
       - name: mystep5-check the docker images
         run: docker images
+      - name: mystep6-login to dockerhub
+        uses: docker/checkout@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: mystep7-push docker image
+        run: docker image push alishakhannnnnnnnn03/myimage_nov2:t${{ github.run_number }
+}
